@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import { ThemedLogo } from "@/components/themed-logo";
 import { MenuIcon, XIcon } from "lucide-react";
 import { BookButton } from "@/components/book-button";
 import { ctaHeader } from "@/components/cta-styles";
@@ -26,9 +26,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-[rgba(var(--lineRGB),0.1)] bg-[rgba(var(--baseRGB),0.88)] backdrop-blur-[12px]">
       <div className="container-page flex items-center justify-between gap-[32px] px-[20px] py-[14px] lg:px-[32px]">
         <a href="#top" className="shrink-0" aria-label="BrigaRx — back to top">
-          <Image
-            src="/brigarx-logo-clay.png"
-            alt="BrigaRx"
+          <ThemedLogo
             width={99}
             height={42}
             priority

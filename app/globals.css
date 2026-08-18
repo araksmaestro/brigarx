@@ -13,14 +13,34 @@
 /* Fonts.
    theme.css declares --head as a bare family name ("Outfit", "Montserrat").
    next/font generates hashed family names, so --head is re-pointed at the
-   loaded font variable here.
+   loaded font variable here, per palette: clay is Outfit, the other four are
+   Montserrat. Both are loaded in app/layout.tsx.
 
-   The active palette is CLAY, whose headings are Outfit. If the palette
-   changes to plum, teal, sky or cyan, headings become Montserrat — load it in
-   app/layout.tsx and change --head below. */
-:root {
+   These rules sit after the theme.css import, so at equal specificity they
+   win over its --head declarations. */
+:root,
+[data-theme="clay"] {
   --head: var(--font-outfit);
+}
+
+[data-theme="plum"],
+[data-theme="teal"],
+[data-theme="sky"],
+[data-theme="cyan"] {
+  --head: var(--font-montserrat);
+}
+
+:root {
   --body-font: var(--font-nunito-sans);
+}
+
+/* Sky accessibility correction.
+   theme.css ships --accent: #29B6F6, which measures ~2.4:1 for white text
+   against a WCAG AA minimum of 4.5:1. The handoff flagged it and specifies
+   #0A70A6 (~5:1 at the same hue) as the fix. theme.css stays pristine, so the
+   correction lives here. */
+[data-theme="sky"] {
+  --accent: #0a70a6;
 }
 
 body {

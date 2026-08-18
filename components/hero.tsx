@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ThemedHeroImage } from "@/components/themed-hero-image";
 import { BookButton } from "@/components/book-button";
 import { ctaFilled, ctaOutline } from "@/components/cta-styles";
 
@@ -50,14 +50,7 @@ export function Hero() {
             className="absolute inset-[22px_-22px_-22px_22px] bg-surface2"
           />
           <div className="relative h-[360px] lg:h-[520px]">
-            <Image
-              src="/hero-visit.webp"
-              alt="An older woman and her adult daughter at home, together on a video visit"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="block object-cover"
-            />
+            <ThemedHeroImage />
           </div>
         </div>
       </div>
