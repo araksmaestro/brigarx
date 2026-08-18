@@ -34,12 +34,7 @@ export function SiteHeader() {
             className="shrink-0"
             aria-label="BrigaRx — back to top"
           >
-            <ThemedLogo
-              width={99}
-              height={42}
-              priority
-              className="h-[42px] w-auto"
-            />
+            <ThemedLogo priority className="h-[42px] w-auto" />
           </a>
 
           <nav className="hidden items-center gap-[30px] lg:flex">
