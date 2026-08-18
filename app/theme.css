@@ -1,0 +1,49 @@
+/* BrigaRx — palette tokens. Set data-theme on <html> or the app root. */
+  :root {
+    --onAccent: #FCFAF6; --head: Outfit; --accent: #A85A42; --deep: #46332C; --link: #8E4C37; --label: #8A5340;
+    --subhead: #7C4531; --ink: #332723; --body: #5A4A44; --muted: #6E5C55;
+    --surface1: #F8EDE5; --surface2: #F1E3D4; --base: #FCFAF6; --onDark: #EBDFD7;
+    --onDarkMuted: #DCC7BB; --sel: #F4E2D7; --lineRGB: 70,51,44; --inkRGB: 51,39,35; --baseRGB: 252,250,246;
+  }
+  [data-theme="plum"] {
+    --onAccent: #FCFAF7; --head: Montserrat; --accent: #7C6789; --deep: #50445C; --link: #6A5578; --label: #6B5B78;
+    --subhead: #5F4C6D; --ink: #3A3240; --body: #554D5E; --muted: #675E73;
+    --surface1: #F4EFF3; --surface2: #F0E6DD; --base: #FCFAF7; --onDark: #E3DBE7;
+    --onDarkMuted: #D7CCDE; --sel: #EBE1EF; --lineRGB: 69,58,82; --inkRGB: 58,50,64; --baseRGB: 251,249,247;
+  }
+  [data-theme="teal"] {
+    --onAccent: #FBFAF6; --head: Montserrat; --accent: #2F6E6B; --deep: #22484A; --link: #2A5F5E; --label: #35706E;
+    --subhead: #2A5250; --ink: #20302F; --body: #42524F; --muted: #5A6A67;
+    --surface1: #EAF2F0; --surface2: #DBEAE5; --base: #FBFAF6; --onDark: #D8E5E2;
+    --onDarkMuted: #C4D8D4; --sel: #DCEAE7; --lineRGB: 34,72,74; --inkRGB: 32,48,47; --baseRGB: 251,250,246;
+  }
+  [data-theme="sky"] {
+    --head: Montserrat; --accent: #29B6F6; --onAccent: #FFFFFF; --deep: #0E3A52; --link: #0F6A96; --label: #106589;
+    --subhead: #0E5E85; --ink: #16262E; --body: #41525C; --muted: #576A74;
+    --surface1: #E9F6FE; --surface2: #DCEDF8; --base: #FBFCFD; --onDark: #D6E9F3;
+    --onDarkMuted: #BEDCEB; --sel: #D8EFFB; --lineRGB: 35,69,94; --inkRGB: 34,48,58; --baseRGB: 251,250,248;
+  }
+  [data-theme="cyan"] {
+    --onAccent: #FFFFFF; --head: Montserrat; --accent: #0A70A6; --deep: #0C3A52; --link: #0B6E9F; --label: #0F6B96;
+    --subhead: #0B5F8A; --ink: #16262E; --body: #41525C; --muted: #576A74;
+    --surface1: #E4F7FC; --surface2: #D6EEF7; --base: #FBFCFD; --onDark: #D2EAF4;
+    --onDarkMuted: #B6DDEC; --sel: #CFF3FC; --lineRGB: 12,58,82; --inkRGB: 22,38,46; --baseRGB: 251,252,253;
+  }
+  [data-theme="clay"] {
+    --onAccent: #FCFAF6; --head: Outfit; --accent: #A85A42; --deep: #46332C; --link: #8E4C37; --label: #8A5340;
+    --subhead: #7C4531; --ink: #332723; --body: #5A4A44; --muted: #6E5C55;
+    --surface1: #F8EDE5; --surface2: #F1E3D4; --base: #FCFAF6; --onDark: #EBDFD7;
+    --onDarkMuted: #DCC7BB; --sel: #F4E2D7; --lineRGB: 70,51,44; --inkRGB: 51,39,35; --baseRGB: 252,250,246;
+  }
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--base);
+  color: var(--ink);
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--deep); }
+::selection { background: var(--sel); }
