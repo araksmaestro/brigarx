@@ -24,41 +24,50 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(var(--lineRGB),0.1)] bg-[rgba(var(--baseRGB),0.88)] backdrop-blur-[12px]">
-      <div className="container-page flex items-center justify-between gap-[32px] px-[20px] py-[14px] lg:px-[32px]">
-        <a href="#top" className="shrink-0" aria-label="BrigaRx — back to top">
-          <ThemedLogo
-            width={99}
-            height={42}
-            priority
-            className="h-[42px] w-auto"
-          />
-        </a>
-
-        <nav className="hidden items-center gap-[30px] lg:flex">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[15px] text-deep no-underline"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-[12px]">
-          <BookButton className={ctaHeader}>Enroll a patient</BookButton>
-
-          <button
-            type="button"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-expanded={menuOpen}
-            aria-controls="site-nav-mobile"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className="cursor-pointer p-[6px] text-deep lg:hidden"
+      {/* The page gutter sits outside .container-page, matching every section
+          below, so the logo lines up with the hero text rather than being
+          inset a further 32px. */}
+      <div className="px-[20px] lg:px-[32px]">
+        <div className="container-page flex items-center justify-between gap-[32px] py-[14px]">
+          <a
+            href="#top"
+            className="shrink-0"
+            aria-label="BrigaRx — back to top"
           >
-            {menuOpen ? <XIcon aria-hidden /> : <MenuIcon aria-hidden />}
-          </button>
+            <ThemedLogo
+              width={99}
+              height={42}
+              priority
+              className="h-[42px] w-auto"
+            />
+          </a>
+
+          <nav className="hidden items-center gap-[30px] lg:flex">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-[15px] text-deep no-underline"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-[12px]">
+            <BookButton className={ctaHeader}>Enroll a patient</BookButton>
+
+            <button
+              type="button"
+              onClick={() => setMenuOpen((open) => !open)}
+              aria-expanded={menuOpen}
+              aria-controls="site-nav-mobile"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              className="cursor-pointer p-[6px] text-deep lg:hidden"
+            >
+              {menuOpen ? <XIcon aria-hidden /> : <MenuIcon aria-hidden />}
+            </button>
+          </div>
         </div>
       </div>
 

@@ -1,5 +1,13 @@
 @import "tailwindcss";
-@import "./theme.css";
+
+/* theme.css is imported into the base layer deliberately.
+   Tailwind v4 puts every utility inside a cascade layer, and unlayered
+   declarations beat layered ones regardless of specificity. Left unlayered,
+   theme.css's bare `a { color: var(--link) }` overrides text-on-accent,
+   text-deep and every other text colour applied to a link — which silently
+   broke the CTAs. In the base layer it still supplies the default link colour
+   for prose, but utilities win where one is set. */
+@import "./theme.css" layer(base);
 
 /* ---------------------------------------------------------------------------
    theme.css is the designer's file, copied from the handoff bundle unchanged.
