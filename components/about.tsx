@@ -1,9 +1,3 @@
-const STATS = [
-  { value: "10+", caption: "Years in specialized psychiatry" },
-  { value: "1", caption: "Prescriber, every visit" },
-  { value: "OR", caption: "Serving Oregon virtually" },
-];
-
 /**
  * Section 9 — about.
  *
@@ -51,21 +45,8 @@ export function About() {
           <p className="mt-[18px] text-[19px] leading-[1.62] text-body text-pretty">
             BrigaRx is a small practice by design. Patients see the same
             prescriber at every visit, and caregivers reach a person who already
-            knows the case.
+            knows them.
           </p>
-
-          <div className="mt-[32px] grid grid-cols-1 gap-[28px] border-t border-[rgba(var(--lineRGB),0.14)] pt-[28px] sm:grid-cols-3">
-            {STATS.map((stat) => (
-              <div key={stat.value}>
-                <p className="font-head text-[34px] font-semibold tracking-[-0.02em] text-deep">
-                  {stat.value}
-                </p>
-                <p className="mt-[6px] text-[15px] leading-[1.45] text-muted">
-                  {stat.caption}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
