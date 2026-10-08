@@ -17,7 +17,7 @@ const ITEMS = [
   {
     numeral: "04",
     title: "Coordination with your team",
-    body: "Behavior support professionals, counselors, primary care and family, working from the same plan.",
+    body: "With your consent, your care team can be included in the plan of care.",
   },
 ];
 
@@ -32,7 +32,7 @@ export function WhatWeDo() {
               What we do
             </p>
             <h2 className="font-head text-[clamp(30px,3.4vw,44px)] leading-[1.1] font-semibold text-ink text-pretty">
-              A prescribing practice, not a portal
+              We are a full service psychiatric practice
             </h2>
           </div>
 
@@ -42,12 +42,6 @@ export function WhatWeDo() {
               history and the people around the patient. Four things make up the
               work.
             </p>
-            <a
-              href="#contact"
-              className="mt-[18px] inline-block border-b border-[rgba(var(--inkRGB),0.3)] pb-[4px] text-[16px] font-semibold text-ink no-underline hover:border-link hover:text-link"
-            >
-              Ask whether we are a fit &rarr;
-            </a>
           </div>
         </div>
 
