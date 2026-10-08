@@ -1,6 +1,5 @@
 import { ThemedHeroImage } from "@/components/themed-hero-image";
-import { BookButton } from "@/components/book-button";
-import { ctaFilled, ctaOutline } from "@/components/cta-styles";
+import { ctaOutline } from "@/components/cta-styles";
 
 /** Section 2 — hero. Body copy is verbatim from the client's existing site. */
 export function Hero() {
@@ -35,8 +34,38 @@ export function Hero() {
             integrated care and long-term stability.
           </p>
 
-          <div className="mt-[34px] flex flex-wrap gap-[14px]">
-            <BookButton className={ctaFilled}>Book an intake visit</BookButton>
+          {/* The practice books by phone only, so the primary hero action is a
+              tel: link rather than the visit-type modal. */}
+          <div className="mt-[34px] flex flex-wrap items-center gap-[28px]">
+            <a
+              href="tel:+18023287369"
+              aria-label="Call BrigaRx to book a visit at (802) 328-7369"
+              className="flex items-center gap-[16px] text-ink no-underline hover:text-accent"
+            >
+              <span className="flex size-[56px] flex-none items-center justify-center rounded-full bg-accent">
+                <svg
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--onAccent)"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </span>
+              <span className="flex flex-col gap-[2px]">
+                <span className="font-sans text-[13px] tracking-[0.18em] text-label uppercase">
+                  Call to book a visit
+                </span>
+                <span className="font-head text-[28px] leading-[1.15] font-semibold tracking-[-0.02em]">
+                  (802) 328-7369
+                </span>
+              </span>
+            </a>
             <a href="#how" className={`${ctaOutline} no-underline`}>
               See how it works
             </a>
