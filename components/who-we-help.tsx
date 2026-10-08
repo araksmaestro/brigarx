@@ -2,7 +2,7 @@ const CARDS = [
   {
     title: "Intellectual & developmental delay.",
     description:
-      "Adults and adolescents whose behavior has become difficult to manage at home, at a day program, or in supported living. Often already on several medications.",
+      "We help adults, adolescents and children whose behavior is a challenge and those who have mental health struggles.",
     chips: [
       "Aggression toward staff or family",
       "Self-injury",
@@ -11,6 +11,7 @@ const CARDS = [
       "Placement at risk",
       "Repeat ER visits",
       "Too many medications",
+      "Depression",
     ],
   },
   {
@@ -41,7 +42,7 @@ export function WhoWeHelp() {
         </p>
 
         <h2 className="max-w-[22ch] font-head text-[clamp(32px,3.8vw,52px)] leading-[1.1] font-semibold text-ink text-pretty">
-          Care built for the people most often turned away
+          Care built for people often turned away
         </h2>
 
         <p className="mt-[20px] mb-[36px] max-w-[58ch] text-[18px] leading-[1.6] text-body text-pretty lg:mb-[52px]">

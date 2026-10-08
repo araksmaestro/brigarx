@@ -1,12 +1,4 @@
-import { SCHEDULING_URL, VISIT_TYPES } from "@/components/booking";
-import { ctaCardFilled, ctaCardOutline } from "@/components/cta-styles";
-
-// The pricing cards name the visit type already, so they link straight to the
-// scheduler rather than opening the visit-type chooser.
-const CARD_CTA = [
-  { label: "Click to Enroll", className: ctaCardFilled },
-  { label: "Book Visit", className: ctaCardOutline },
-];
+import { VISIT_TYPES } from "@/components/booking";
 
 /** Section 10 — transparent pricing. Prices and the note are verbatim. */
 export function Pricing() {
@@ -25,7 +17,7 @@ export function Pricing() {
         </h2>
 
         <div className="grid grid-cols-1 gap-[26px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-          {VISIT_TYPES.map((visit, index) => (
+          {VISIT_TYPES.map((visit) => (
             <div
               key={visit.id}
               className="flex flex-col gap-[8px] rounded-[14px] bg-base px-[26px] py-[32px] lg:px-[36px] lg:py-[40px]"
@@ -36,16 +28,7 @@ export function Pricing() {
               <p className="font-head text-[44px] font-semibold tracking-[-0.02em] text-deep">
                 {visit.price}
               </p>
-              <p className="mb-[28px] text-[16px] text-muted">{visit.meta}</p>
-
-              <a
-                href={SCHEDULING_URL}
-                target="_blank"
-                rel="noopener"
-                className={`${CARD_CTA[index].className} no-underline`}
-              >
-                {CARD_CTA[index].label}
-              </a>
+              <p className="mb-0 text-[16px] text-muted">{visit.meta}</p>
             </div>
           ))}
         </div>
@@ -56,6 +39,17 @@ export function Pricing() {
           for submission to your health insurer. All of our rates are Oregon
           Medicaid rates.
         </p>
+
+        {/* TEMPORARY — remove or reword once Medicaid Open Card acceptance is
+            confirmed. */}
+        <div className="mt-[22px] flex max-w-[74ch] items-center gap-[14px] rounded-[12px] border border-[rgba(var(--lineRGB),0.18)] bg-base px-[20px] py-[16px]">
+          <span className="flex-none rounded-[100px] bg-accent px-[11px] py-[6px] text-[12px] font-bold tracking-[0.14em] text-[var(--onAccent)] uppercase">
+            Pending
+          </span>
+          <p className="m-0 text-[16px] leading-[1.5] text-ink">
+            Medicaid Open Card acceptance is pending.
+          </p>
+        </div>
       </div>
     </section>
   );

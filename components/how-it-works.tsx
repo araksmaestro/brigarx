@@ -1,18 +1,32 @@
-const STEPS = [
+import type { ReactNode } from "react";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/components/booking";
+
+const STEPS: { label: string; title: string; body: ReactNode }[] = [
   {
     label: "Step one",
     title: "Reach out.",
-    body: "Book online, or call if you would rather talk first. Tell us who the patient is and what you are seeing.",
+    body: (
+      <>
+        Call{" "}
+        <a
+          href={PHONE_HREF}
+          className="text-on-dark underline decoration-[rgba(var(--baseRGB),0.5)] hover:text-[var(--base)] hover:decoration-[var(--base)]"
+        >
+          {PHONE_DISPLAY}
+        </a>{" "}
+        for an appointment.
+      </>
+    ),
   },
   {
     label: "Step two",
     title: "One-hour intake visit.",
-    body: "By video, from home or the patient’s program. Caregivers and guardians are welcome to join.",
+    body: "By video from home. Caregivers are welcome to join with the patient’s consent.",
   },
   {
     label: "Step three",
     title: "A plan everyone can follow.",
-    body: "Written in plain language and shared with the behavior and support professionals already involved.",
+    body: "Written in plain language and, with your consent, shared with your family and support team.",
   },
   {
     label: "Step four",

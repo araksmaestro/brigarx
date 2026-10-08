@@ -17,16 +17,11 @@ export function IntegratedCare() {
           </h2>
 
           <p className="mt-[22px] text-[18.5px] leading-[1.62] text-body text-pretty">
-            We collaborate closely with behavior support professionals to
-            provide a holistic, integrated approach for our highest need
-            patients, ensuring comprehensive care that addresses both cognitive
-            and behavioral challenges.
-          </p>
-
-          <p className="mt-[18px] text-[18.5px] leading-[1.62] text-body text-pretty">
-            That means asking what changed in the environment before reaching
-            for a new prescription, and keeping every person on the team
-            informed when something does change.
+            With your consent, we collaborate closely with behavior support
+            professionals to provide a holistic, integrated approach for our
+            highest need patients, ensuring comprehensive care that addresses
+            mental health struggles in the context of cognitive and behavioral
+            challenges.
           </p>
         </div>
       </div>

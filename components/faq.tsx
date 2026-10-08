@@ -48,14 +48,10 @@ export function Faq() {
       className="bg-base px-[20px] py-[56px] lg:px-[32px] lg:py-[104px]"
     >
       <div className="container-page">
-        <div className="mb-[28px] grid grid-cols-1 items-end gap-[28px] lg:mb-[36px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-[64px]">
+        <div className="mb-[36px]">
           <h2 className="font-head text-[clamp(30px,3.4vw,44px)] leading-[1.1] font-semibold text-ink text-pretty">
             Questions caregivers ask first
           </h2>
-          <p className="max-w-[46ch] text-[17.5px] leading-[1.6] text-body text-pretty">
-            If yours is not here, call and ask. Nothing below is a commitment,
-            and there is no charge for finding out whether this practice fits.
-          </p>
         </div>
 
         <div>

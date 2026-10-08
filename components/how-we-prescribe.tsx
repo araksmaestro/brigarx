@@ -1,11 +1,19 @@
-const PRINCIPLES = [
+import type { ReactNode } from "react";
+
+const PRINCIPLES: { title: string; body: ReactNode }[] = [
   {
     title: "One change at a time",
-    body: "When three things change at once, nobody can tell what helped. We change one and watch.",
+    body: "When too many things change at once, it is hard to know what helps and what doesn’t.",
   },
   {
     title: "Rule out the reversible first",
-    body: "Pain, constipation, infection, sleep, a new staff member. Behavior is communication before it is a diagnosis.",
+    body: (
+      <>
+        Many things can change behavior and mood: pain, constipation, poor
+        sleep, a new staff member. We understand that behavior <em>is</em>{" "}
+        communication. We first look for non-medication options.
+      </>
+    ),
   },
   {
     title: "Deprescribe on purpose",
@@ -23,13 +31,13 @@ export function HowWePrescribe() {
         </p>
 
         <h2 className="max-w-[26ch] font-head text-[clamp(32px,3.8vw,50px)] leading-[1.1] font-semibold text-ink text-pretty">
-          The fewest medications that hold the patient steady
+          The fewest medications that keep the patient steady
         </h2>
 
         <p className="mt-[20px] mb-[36px] max-w-[60ch] text-[18px] leading-[1.6] text-body text-pretty lg:mb-[52px]">
           Patients with cognitive challenges are among the most heavily
           medicated people in the health system, often after years of
-          crisis-driven additions. Our default is subtraction.
+          crisis-driven additions.
         </p>
 
         <div className="grid grid-cols-1 gap-[26px] lg:grid-cols-3">

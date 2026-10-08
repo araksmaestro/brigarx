@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { ThemedLogo } from "@/components/themed-logo";
 import { MenuIcon, XIcon } from "lucide-react";
-import { BookButton } from "@/components/book-button";
-import { ctaHeader } from "@/components/cta-styles";
 
 const NAV_LINKS = [
   { href: "#who", label: "Who we help" },
@@ -28,7 +26,9 @@ export function SiteHeader() {
           below, so the logo lines up with the hero text rather than being
           inset a further 32px. */}
       <div className="px-[20px] lg:px-[32px]">
-        <div className="container-page flex items-center justify-between gap-[32px] py-[14px]">
+        {/* On desktop a 1fr / auto / 1fr grid keeps the nav centred with no
+            right-hand CTA to balance the logo. */}
+        <div className="container-page flex items-center justify-between gap-[32px] py-[14px] lg:grid lg:grid-cols-[1fr_auto_1fr]">
           <a
             href="#top"
             className="shrink-0"
@@ -49,20 +49,16 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-[12px]">
-            <BookButton className={ctaHeader}>Enroll a patient</BookButton>
-
-            <button
-              type="button"
-              onClick={() => setMenuOpen((open) => !open)}
-              aria-expanded={menuOpen}
-              aria-controls="site-nav-mobile"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              className="cursor-pointer p-[6px] text-deep lg:hidden"
-            >
-              {menuOpen ? <XIcon aria-hidden /> : <MenuIcon aria-hidden />}
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-expanded={menuOpen}
+            aria-controls="site-nav-mobile"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            className="cursor-pointer p-[6px] text-deep lg:hidden"
+          >
+            {menuOpen ? <XIcon aria-hidden /> : <MenuIcon aria-hidden />}
+          </button>
         </div>
       </div>
 
