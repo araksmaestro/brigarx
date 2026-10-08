@@ -4,12 +4,10 @@ import Image from "next/image";
 import { usePaletteAssets } from "@/components/palette-provider";
 
 /**
- * The hero photograph is palette-specific: a plum-toned frame for plum and
- * clay, a teal-toned one for teal, sky and cyan.
+ * The hero photograph comes from the active palette's assets. All palettes
+ * currently share hero-bedroom.png.
  *
- * OPEN ITEM — both photographs are AI-generated placeholders, and clay is
- * currently served the plum-toned frame. The designer has been asked whether
- * clay wants its own colour grade.
+ * OPEN ITEM — the photograph is an AI-generated placeholder.
  */
 export function ThemedHeroImage() {
   const { hero } = usePaletteAssets();
@@ -17,7 +15,7 @@ export function ThemedHeroImage() {
   return (
     <Image
       src={hero}
-      alt="An older woman and her adult daughter at home, together on a video visit"
+      alt="A teenager and his grandmother at a laptop in his bedroom, together on a video visit"
       fill
       priority
       sizes="(max-width: 1024px) 100vw, 50vw"
